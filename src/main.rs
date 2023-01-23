@@ -2,7 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
 
 mod app;
-pub use app::TemplateApp;
+pub use app::MainApp;
 
 fn main() {
     // Log to stdout (if you run with `RUST_LOG=debug`).
@@ -12,6 +12,6 @@ fn main() {
     eframe::run_native(
         "Auto Input",
         native_options,
-        Box::new(|cc| Box::new(crate::TemplateApp::new(cc))),
+        Box::new(|cc| Box::new(crate::MainApp::new(cc))),
     );
 }
